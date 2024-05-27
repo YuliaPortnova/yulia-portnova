@@ -1,0 +1,63 @@
+.main-footer {
+  color: $color-base-white;
+
+  background-color: $color-base-secondary;
+}
+
+.main-footer__container {
+  padding: 20px;
+
+  @media (min-width: $vp-768) {
+    padding: 20px;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  @media (min-width: $vp-1440) {
+    padding: 40px;
+  }
+}
+
+.main-footer__title {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 0 15px 20px;
+}
+
+.main-footer__link {
+  padding: 7px 20px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 16px;
+
+  display: block;
+  color: $color-base-white;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $color-base-primary;
+  }
+
+  &:active {
+    outline: 2px solid $color-base-white;
+  }
+}
+
+.main-footer__github {
+  @media (min-width: $vp-768) {
+    justify-self: end;
+  }
+}
+
+.main-footer__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 0;
+  }
+}
