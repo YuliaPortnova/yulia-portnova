@@ -1,0 +1,27 @@
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  font-family: $ff-montserrat-alternates;
+  color: $color-base-black;
+}
+
+.page__page-main {
+  flex-grow: 1;
+}
+
+.page__main-footer {
+  margin-top: auto;
+}
+
+.page__leveler {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+}

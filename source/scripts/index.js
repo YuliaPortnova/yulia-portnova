@@ -1,1 +1,3 @@
-/* в этот файл добавляет скрипты*/
+import { initMainMenu } from './main-menu.js';
+
+initMainMenu();
