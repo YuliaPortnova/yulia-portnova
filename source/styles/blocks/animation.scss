@@ -1,0 +1,33 @@
+.animation__container {
+  padding: 40px;
+
+  @media (min-width: $vp-1440) {
+    padding: 60px;
+  }
+}
+
+.animation__title {
+  margin: 0 0 30px;
+
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  font-family: $ff-old-standard-tt;
+  color: $color-base-primary;
+
+  @media (min-width: $vp-768) {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
+
+.animation__list {
+  margin: 0;
+  padding: 40px;
+
+  list-style-type: none;
+
+  border: 4px solid $color-alt-primary-lighter;
+  border-radius: 20px;
+}
+

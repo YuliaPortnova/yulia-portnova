@@ -1,0 +1,64 @@
+.burger-arrow {
+  display: block;
+  width: 100px;
+  height: 80px;
+  padding: 10px 20px;
+  border-radius: 15px;
+
+  background-color: transparent;
+  border: none;
+  transition: background-color 0.4s;
+
+  &:hover {
+    background-color: $color-alt-primary-lighter;
+  }
+}
+
+.burger-arrow__icon {
+  display: block;
+  width: 100%;
+  --line-height: 6px;
+  height: var(--line-height);
+
+  background-color: $color-base-primary;
+
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.7s;
+
+  &::before,
+  &::after {
+    content: "";
+
+    display: block;
+    width: 100%;
+    height: var(--line-height);
+
+    background-color: $color-base-primary;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.7s;
+  }
+
+  &::before {
+    transform: translate(0, calc(-2 * var(--line-height)));
+  }
+
+  &::after {
+    transform: translate(0, var(--line-height));
+  }
+}
+
+.is-active .burger-arrow__icon {
+  transform: rotate(180deg);
+
+  &::before {
+    width: 60%;
+    transform: translate(30px, -11px) rotate(45deg);
+  }
+
+  &::after {
+    width: 60%;
+    transform: translate(30px, 4px) rotate(-45deg);
+  }
+}
+
