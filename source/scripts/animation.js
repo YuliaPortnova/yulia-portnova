@@ -1,16 +1,18 @@
 const burgerArrowButton = document.querySelector('.burger-arrow');
+const starButton = document.querySelector('.star');
 
-const animateBurgerArrow = () => {
-  if (burgerArrowButton) {
-    const onBurgerArrowButtonClick = () => {
-      burgerArrowButton.classList.toggle('is-active');
+const activateButton = (button) => {
+  if (button) {
+    const onButtonClick = () => {
+      button.classList.toggle('is-active');
     };
-    burgerArrowButton.addEventListener('click', onBurgerArrowButtonClick);
+    button.addEventListener('click', onButtonClick);
   }
 };
 
 const initAnimation = () => {
-  animateBurgerArrow();
+  activateButton(burgerArrowButton);
+  activateButton(starButton);
 };
 
 export {initAnimation};
