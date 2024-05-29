@@ -3,10 +3,11 @@
   width: 100px;
   height: 80px;
   padding: 10px 20px;
-  border-radius: 15px;
 
   background-color: transparent;
   border: none;
+  border-radius: 15px;
+
   transition: background-color 0.4s;
 
   &:hover {
@@ -17,8 +18,9 @@
 .burger-arrow__icon {
   display: block;
   width: 100%;
-  --line-height: 6px;
   height: var(--line-height);
+
+  --line-height: 6px;
 
   background-color: $color-base-primary;
 
@@ -53,12 +55,13 @@
 
   &::before {
     width: 60%;
+
     transform: translate(30px, -11px) rotate(45deg);
   }
 
   &::after {
     width: 60%;
+
     transform: translate(30px, 4px) rotate(-45deg);
   }
 }
-
