@@ -21,6 +21,10 @@
 <body class="page__body">
   <header class="page__main-header main-header">
     <div class="main-header__container page__leveler">
+      <button class="main-header__toggle" type="button">
+        <span class="visually-hidden">Открыть или закрыть меню навигации по сайту.</span>
+        <span class="main-header__toggle-icon"></span>
+      </button>
       <nav class="main-header__nav">
         <ul class="main-header__list">
           <li class="main-header__item">
@@ -34,10 +38,6 @@
           </li>
         </ul>
       </nav>
-      <button class="main-header__toggle" type="button">
-        <span class="visually-hidden">Открыть или закрыть меню навигации по сайту.</span>
-        <span class="main-header__toggle-icon"></span>
-      </button>
     </div>
   </header>
   <main>
@@ -47,13 +47,25 @@
         <h2 class="animation__title">CSS анимации</h2>
         <ul class="animation__list">
           <li class="animation__item">
+            <button class="animation__button animation-button" type="button">
+              <span class="animation-button__text">Всё получится?</span>
+              <span class="animation-button__text">Yes</span>
+            </button>
+          </li>
+          <li class="animation__item">
             <button class="animation__button burger-arrow" type="button">
               <span class="visually-hidden">Пример анимации с трансформациями.</span>
               <span class="burger-arrow__icon"></span>
             </button>
           </li>
           <li class="animation__item">
-            <button class="animation__button star" type="button">clip-path</button>
+            <button class="animation__button star" type="button">Ты звезда!</button>
+          </li>
+          <li class="animation__item">
+            <div tabindex="0" class="animation__button animation__hidden-text hidden-text">
+              <p class="hidden-text__title">Товар</p>
+              <p class="hidden-text__description">Длинный текст с описанием</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -67,7 +79,7 @@
         <a class="main-footer__link" href="https://t.me/JuliePortnova" target="_blank" rel="noreferrer noopener">Мой телеграм - @JuliePortnova</a>
         <a class="main-footer__link" href="mailto:yuyul@yandex.ru">Почта - yuyul@yandex.ru</a>
       </div>
-      <a class="main-footer__link" href="https://github.com/YuliaPortnova?tab=repositories" target="_blank" rel="noreferrer noopener">Мои проекты на GitHub</a>
+      <a class="main-footer__link main-footer__github" href="https://github.com/YuliaPortnova?tab=repositories" target="_blank" rel="noreferrer noopener">Мои проекты на GitHub</a>
     </div>
   </footer>
 </body>

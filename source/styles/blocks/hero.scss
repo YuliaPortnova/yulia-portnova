@@ -62,14 +62,9 @@
 .hero__img-container {
   max-width: 400px;
   margin: 0 auto;
-
-  @media (min-width: $vp-768) {
-    max-width: auto;
-  }
 }
 
 .hero__img {
   display: block;
-  width: 100%;
   border-radius: 30px;
 }

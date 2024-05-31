@@ -5,7 +5,7 @@
 }
 
 .main-footer__container {
-  padding: 20px;
+  padding: 40px;
 
   @media (min-width: $vp-768) {
     display: grid;
@@ -15,18 +15,19 @@
   }
 
   @media (min-width: $vp-1440) {
-    padding: 40px;
+    padding: 60px;
   }
 }
 
 .main-footer__title {
   font-weight: 600;
   font-size: 18px;
-  margin: 0 0 15px 20px;
+  margin: 0 0 15px;
 }
 
 .main-footer__link {
-  padding: 7px 20px;
+  position: relative;
+  padding: 7px;
   border-radius: 15px;
   font-weight: 600;
   font-size: 16px;
@@ -35,13 +36,33 @@
   color: $color-base-white;
   text-decoration: none;
 
-  &:hover {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
     background-color: $color-base-primary;
+    transition: transform 0.4s ease;
+    transform: scaleX(0);
+    transform-origin: right;
   }
+}
 
-  &:active {
-    outline: 2px solid $color-base-white;
-  }
+.main-footer__link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.main-footer__link:focus-visible::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.main-footer__link:active::before {
+  background-color: $color-base-white;
 }
 
 .main-footer__github {
