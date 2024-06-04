@@ -1,0 +1,31 @@
+.ball {
+  display: block;
+  width: 120px;
+  height: 80px;
+  margin: 0;
+  padding: 7px;
+
+  background-color: $color-alt-primary-lighter;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 66px;
+    height: 66px;
+
+    background-image: radial-gradient(circle at 65% 15%, $color-alt-primary-lighter, $color-base-primary);
+    border-radius: 50%;
+    box-shadow: -5px 10px 20px rgba($color-base-primary, 0.3);
+
+    transition: transform 0.6s ease;
+  }
+}
+
+.ball:hover::before {
+  background-image: radial-gradient(circle at 65% 15%, $color-base-white, $color-base-primary);
+  transform: translateX(40px);
+}
