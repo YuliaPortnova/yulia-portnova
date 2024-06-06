@@ -9,7 +9,7 @@
   border-radius: 15px;
   cursor: pointer;
 
-  transition: background-color 0.5s;
+  transition: background-color 0.3s;
 
   &:hover {
     background-color: $color-alt-primary-lighter;
@@ -26,7 +26,7 @@
   background-color: $color-base-primary;
 
   transition-timing-function: ease-in-out;
-  transition-duration: 0.7s;
+  transition-duration: 0.5s;
 
   &::before,
   &::after {
@@ -39,7 +39,7 @@
     background-color: $color-base-primary;
 
     transition-timing-function: ease-in-out;
-    transition-duration: 0.7s;
+    transition-duration: 0.5s;
   }
 
   &::before {
