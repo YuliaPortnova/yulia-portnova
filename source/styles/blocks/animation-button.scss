@@ -1,22 +1,6 @@
 .animation-button {
-  position: relative;
   z-index: 1;
-
-  width: 150px;
-  min-height: 80px;
-  padding: 10px;
-  overflow: hidden;
-  border-radius: 15px;
-
-  font-weight: 600;
-  text-align: center;
-  font-size: 14px;
-  font-family: $ff-montserrat-alternates;
-  color: $color-base-primary;
-  background-color: transparent;
-
-  border: none;
-  cursor: pointer;
+  min-height: 60px;
 }
 
 .animation-button__text {

@@ -1,55 +1,46 @@
 .hidden-text {
-  position: relative;
-
   display: grid;
   justify-content: center;
   align-items: center;
-  width: 180px;
-  min-height: 80px;
-  overflow: hidden;
+  padding: 0;
+  min-height: 60px;
 
-  font-weight: 600;
-  text-align: center;
-  font-size: 14px;
-  font-family: $ff-montserrat-alternates;
-  color: $color-base-primary;
-
-  border-radius: 15px;
   box-shadow: 0 0 0 2px $color-base-primary;
-  cursor: pointer;
 
   transition: box-shadow 0.5s;
 
   &:hover,
   &:focus-within {
-    box-shadow: 0 0 40px 1px $color-base-primary;
+    box-shadow: 0 0 40px 1px rgba($color-base-primary, 0.5);
   }
 }
 
 .hidden-text__title {
+  margin: 0;
+  padding: 15px;
+
   grid-column-start: 1;
   grid-row-start: 1;
-
-  margin: 0;
-  padding: 20px;
 }
 
 .hidden-text__description {
   z-index: 1;
+  line-height: 15px;
 
-  grid-column-start: 1;
-  grid-row-start: 1;
   height: 100%;
   margin: 0;
-  padding: 25px;
+  padding: 15px;
 
   color: $color-base-secondary;
 
-  background: linear-gradient(-75deg, #2dff1e, $color-base-white, $color-accent);
+  background: linear-gradient(-45deg, rgba(251, 45, 247, 0.5), $color-base-white, rgba(251, 45, 247, 0.5));
 
   transition: clip-path 0.8s ease;
 
   clip-path: circle(0% at 50% 50%);
+
+  grid-column-start: 1;
+  grid-row-start: 1;
 }
 
 .hidden-text:hover .hidden-text__description,

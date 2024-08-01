@@ -1,7 +1,7 @@
 .ball {
   display: block;
   width: 120px;
-  height: 80px;
+  height: 60px;
   margin: 0;
   padding: 7px;
 
@@ -14,8 +14,8 @@
     content: "";
 
     display: block;
-    width: 66px;
-    height: 66px;
+    width: 46px;
+    height: 46px;
 
     background-image: radial-gradient(circle at 65% 15%, $color-alt-primary-lighter, $color-base-primary);
     border-radius: 50%;
@@ -27,5 +27,5 @@
 
 .ball:hover::before {
   background-image: radial-gradient(circle at 65% 15%, $color-base-white, $color-base-primary);
-  transform: translateX(40px);
+  transform: translateX(60px);
 }

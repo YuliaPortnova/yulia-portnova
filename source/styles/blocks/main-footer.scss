@@ -5,49 +5,60 @@
 }
 
 .main-footer__container {
-  padding: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
   @media (min-width: $vp-768) {
     display: grid;
+    align-items: start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
     gap: 40px;
     grid-template-columns: 1fr 1fr;
-    align-items: start;
   }
 
   @media (min-width: $vp-1440) {
-    padding: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
 .main-footer__title {
+  margin: 0 0 10px;
+
   font-weight: 600;
   font-size: 18px;
-  margin: 0 0 15px;
 }
 
 .main-footer__link {
   position: relative;
-  padding: 7px;
-  border-radius: 15px;
-  font-weight: 600;
-  font-size: 16px;
 
   display: block;
+  padding: 7px;
+
+  font-weight: 600;
+  font-size: 14px;
   color: $color-base-white;
   text-decoration: none;
 
+  border-radius: 15px;
+
   &::before {
     content: "";
-    display: block;
     position: absolute;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+
+    display: block;
     height: 2px;
+
     background-color: $color-base-primary;
-    transition: transform 0.5s ease;
     transform: scaleX(0);
     transform-origin: right;
+
+    transition: transform 0.5s ease;
   }
 }
 
@@ -66,6 +77,8 @@
 }
 
 .main-footer__github {
+  font-size: 16px;
+
   @media (min-width: $vp-768) {
     justify-self: end;
   }

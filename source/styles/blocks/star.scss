@@ -1,20 +1,8 @@
 .star {
-  position: relative;
   z-index: 1;
 
-  display: block;
-  width: 150px;
-  height: 80px;
-
-  background-color: transparent;
-  border: none;
-  border-radius: 15px;
-  overflow: hidden;
-  cursor: pointer;
-  font-family: $ff-montserrat-alternates;
+  height: 60px;
   color: $color-base-white;
-  font-size: 14px;
-  font-weight: 600;
 }
 
 .star::before {
@@ -30,6 +18,7 @@
   background-color: $color-base-primary;
 
   transition: clip-path 0.5s ease;
+
   clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 64%, 100% 100%, 51% 100%, 0 100%, 0 64%, 0 36%, 0 0);
 }
 
