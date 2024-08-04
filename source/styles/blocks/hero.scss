@@ -3,8 +3,8 @@
 }
 
 .hero__container {
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   @media (min-width: $vp-768) {
     display: grid;
