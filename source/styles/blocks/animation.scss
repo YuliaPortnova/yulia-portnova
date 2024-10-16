@@ -15,17 +15,6 @@
 
 .animation__title {
   margin: 0 0 30px;
-
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 46px;
-  font-family: $ff-old-standard-tt;
-  color: $color-base-primary;
-
-  @media (min-width: $vp-768) {
-    font-size: 46px;
-    line-height: 56px;
-  }
 }
 
 .animation__list {

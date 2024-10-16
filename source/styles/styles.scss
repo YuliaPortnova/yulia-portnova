@@ -1,19 +1,21 @@
 /* GLOBAL */
-@import "./common/variables.scss";
-@import "./common/global.scss";
-@import "./common/fonts.scss";
-@import "./common/utils.scss";
+@import "./common/variables";
+@import "./common/global";
+@import "./common/fonts";
+@import "./common/utils";
 
 /* BLOCKS */
-@import "./blocks/page.scss";
-@import "./blocks/main-header.scss";
-@import "./blocks/hero.scss";
-@import "./blocks/animation.scss";
-@import "./blocks/main-footer.scss";
-@import "./blocks/burger-arrow.scss";
-@import "./blocks/star.scss";
-@import "./blocks/hidden-text.scss";
-@import "./blocks/animation-button.scss";
-@import "./blocks/ball.scss";
-@import "./blocks/circle-text.scss";
-@import "./blocks/ken-burns-effect.scss"
+@import "./blocks/page";
+@import "./blocks/title";
+@import "./blocks/main-header";
+@import "./blocks/hero";
+@import "./blocks/projects";
+@import "./blocks/animation";
+@import "./blocks/main-footer";
+@import "./blocks/burger-arrow";
+@import "./blocks/star";
+@import "./blocks/hidden-text";
+@import "./blocks/animation-button";
+@import "./blocks/ball";
+@import "./blocks/circle-text";
+@import "./blocks/ken-burns-effect";

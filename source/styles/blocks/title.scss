@@ -1,0 +1,12 @@
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  font-family: $ff-old-standard-tt;
+  color: $color-base-primary;
+
+  @media (min-width: $vp-768) {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
