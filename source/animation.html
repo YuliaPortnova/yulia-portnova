@@ -62,21 +62,23 @@
             <button class="animation__button star" type="button">Ты звезда!</button>
           </li>
           <li class="animation__item">
-            <button class="animation__button ball" type="button"></button>
+            <button class="animation__button ball" type="button">
+              <span class="visually-hidden">Кнопка с шариком.</span>
+            </button>
           </li>
           <li class="animation__item">
-            <div tabindex="0" class="animation__button animation__hidden-text hidden-text">
+            <div class="animation__button animation__hidden-text hidden-text" tabindex="0" >
               <p class="hidden-text__title">Товар</p>
               <p class="hidden-text__description">Текст с описанием</p>
             </div>
           </li>
           <li class="animation__item circle-text">
-            <svg class="circle-text__svg" viewBox="0 0 100 100">
+            <svg class="circle-text__svg" viewBox="0 0 100 100" width="100" height="100">
               <path id="circle" d="M 0,50 a 50,50 0 1,1 0,1 z" />
               <text>
-                <textPath xlink:href="#circle">
+                <textpath href="#circle">
                   Юлия Портнова
-                </textPath>
+                </textpath>
               </text>
             </svg>
           </li>

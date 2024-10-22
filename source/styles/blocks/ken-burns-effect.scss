@@ -1,4 +1,3 @@
-
 .ken-burns-effect {
   position: relative;
 
@@ -29,18 +28,23 @@
     transform: scale(0.5);
     transform-origin: left top;
   }
+
   20% {
     transform: translate(0, 0);
   }
+
   40% {
     transform: translate(-50%, -50%);
   }
+
   60% {
     transform: translate(0, -50%) scale(1.2);
   }
+
   80% {
     transform: translate(-50%, 0);
   }
+
   100% {
     transform: scale(0.5);
     transform-origin: left top;
