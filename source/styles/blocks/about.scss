@@ -1,20 +1,21 @@
 .about {
   border-top: 3px dotted $color-base-primary;
-  background-color: $color-light-gray;
 }
 
 .about__container {
+  display: grid;
   padding-top: 30px;
   padding-bottom: 30px;
-  display: grid;
-  gap: 18px;
+
+  gap: 25px;
 
   @media (min-width: $vp-768) {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 30px;
     padding-top: 40px;
     padding-bottom: 40px;
+
+    gap: 45px;
+    grid-template-columns: repeat(6, 1fr);
   }
 
   @media (min-width: $vp-1440) {
@@ -57,10 +58,17 @@
       grid-column: 4/-1;
     }
   }
+
+  &--certificates {
+    @media (min-width: $vp-768) {
+      grid-column: 1/-1;
+    }
+  }
 }
 
 .about__title {
   margin: 0 0 15px;
+
   font-size: 18px;
   line-height: 24px;
   color: $color-base-primary;
@@ -75,30 +83,61 @@
 }
 
 .about__list {
-  margin: 0;
-  padding: 0 0 0 17px;
-  list-style-type: circle;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0 0 0 17px;
+
+  list-style-type: circle;
+
   gap: 10px;
+
+  .about__wrapper--certificates & {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 0;
+
+    gap: 20px;
+
+    @media (min-width: $vp-768) {
+      row-gap: 30px;
+    }
+  }
 }
 
 .about__item {
-  font-family: $ff-old-standard-tt;
   font-size: 14px;
   line-height: 18px;
+  font-family: $ff-old-standard-tt;
 
   @media (min-width: $vp-768) {
     font-size: 16px;
     line-height: 20px;
   }
+
+  .about__wrapper--certificates & {
+    display: flex;
+    align-items: center;
+    max-width: 240px;
+    max-height: 330px;
+    overflow: hidden;
+
+    border: 2px solid $color-base-primary;
+    border-radius: 20px;
+  }
+}
+
+.about__certificates-img {
+  display: block;
 }
 
 .about__text {
   margin: 0 0 10px;
-  font-family: $ff-old-standard-tt;
+
   font-size: 14px;
   line-height: 18px;
+  font-family: $ff-old-standard-tt;
   text-align: justify;
 
   @media (min-width: $vp-768) {
@@ -107,9 +146,10 @@
   }
 
   &--small {
+    margin-top: -7px;
+
     font-size: 12px;
     line-height: 14px;
-    margin-top: -7px;
 
     @media (min-width: $vp-768) {
       font-size: 14px;
@@ -121,5 +161,3 @@
 .about__text:last-of-type {
   margin-bottom: 0;
 }
-
-
