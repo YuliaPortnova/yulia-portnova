@@ -115,16 +115,23 @@
     font-size: 16px;
     line-height: 20px;
   }
+}
 
-  .about__wrapper--certificates & {
-    display: flex;
-    align-items: center;
-    max-width: 240px;
-    max-height: 330px;
-    overflow: hidden;
+.about__link {
+  display: flex;
+  align-items: center;
+  max-width: 240px;
+  max-height: 330px;
+  overflow: hidden;
 
-    border: 2px solid $color-base-primary;
-    border-radius: 20px;
+  border: 3px dotted $color-base-primary;
+  border-radius: 20px;
+  filter: invert(0%);
+
+  transition: filter 0.5s ease;
+
+  &:hover {
+    filter: invert(100%);
   }
 }
 
