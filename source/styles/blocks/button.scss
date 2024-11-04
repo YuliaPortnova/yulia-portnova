@@ -1,0 +1,36 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  padding: 14px 20px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: transparent;
+  border-radius: 20px;
+  border: 2px solid $color-base-primary;
+  cursor: pointer;
+
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    color: $color-base-white;
+
+    background-color: $color-base-secondary;
+  }
+
+  &:active {
+    color: $color-base-secondary;
+
+    background-color: $color-base-white;
+  }
+
+  @media (min-width: $vp-768) {
+    font-size: 17px;
+  }
+}

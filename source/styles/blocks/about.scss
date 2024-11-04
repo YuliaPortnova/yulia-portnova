@@ -93,8 +93,7 @@
   gap: 10px;
 
   .about__wrapper--certificates & {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     padding-left: 0;
 
