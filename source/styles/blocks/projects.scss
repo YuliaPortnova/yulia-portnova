@@ -13,14 +13,12 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-    gap: 30;
+    gap: 48px;
   }
 
   @media (min-width: $vp-1440) {
     padding-top: 100px;
     padding-bottom: 100px;
-
-    gap: 40;
   }
 }
 
@@ -41,7 +39,7 @@
   gap: 4px 15px;
 
   @media (min-width: $vp-768) {
-    padding-top: 25px;
+    padding-top: 35px;
   }
 
   &::before {
@@ -56,6 +54,12 @@
     background-color: $color-base-primary;
     border-radius: 2px;
   }
+}
+
+.projects__categories {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .projects__category-title {
@@ -106,12 +110,13 @@
   gap: 18px;
 
   @media (min-width: $vp-768) {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 
     gap: 25px 30px;
   }
 
   @media (min-width: $vp-1440) {
+    margin-bottom: 60px;
     gap: 30px 40px;
   }
 }
@@ -185,7 +190,7 @@
   margin-bottom: 15px;
   overflow: hidden;
   transform: rotate(0deg);
-  transition: transform 0.8s cubic-bezier(.5,-5,.5,3);
+  transition: transform 0.8s cubic-bezier(0.5, -5, 0.5, 3);
 
   &:hover {
     transform: rotate(0.5deg);
@@ -247,6 +252,10 @@
     background-color: $color-alt-primary-lighter;
     border-color: transparent;
     outline: none;
+  }
+
+  &--top {
+    margin: 0  auto 15px;
   }
 }
 
