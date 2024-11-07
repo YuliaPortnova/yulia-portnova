@@ -1,0 +1,1 @@
+var t=document.querySelector(".main-header"),c=t.querySelector(".main-header__toggle"),n=()=>{let e=()=>{t.classList.toggle("is-open")};c.addEventListener("click",e)};var a=document.querySelector(".burger-arrow"),s=document.querySelector(".star"),o=e=>{if(e){let r=()=>{e.classList.toggle("is-active")};e.addEventListener("click",r)}},i=()=>{o(a),o(s)};n();i();

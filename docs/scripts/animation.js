@@ -1,0 +1,1 @@
+var r=document.querySelector(".burger-arrow"),c=document.querySelector(".star"),e=t=>{if(t){let o=()=>{t.classList.toggle("is-active")};t.addEventListener("click",o)}},n=()=>{e(r),e(c)};export{n as initAnimation};
