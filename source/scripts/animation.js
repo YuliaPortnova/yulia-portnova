@@ -1,5 +1,4 @@
-const burgerArrowButton = document.querySelector('.burger-arrow');
-const starButton = document.querySelector('.star');
+const animationButtons = document.querySelectorAll('.animation__button');
 
 const activateButton = (button) => {
   if (button) {
@@ -11,8 +10,9 @@ const activateButton = (button) => {
 };
 
 const initAnimation = () => {
-  activateButton(burgerArrowButton);
-  activateButton(starButton);
+  animationButtons.forEach((button) => {
+    activateButton(button);
+  });
 };
 
 export {initAnimation};

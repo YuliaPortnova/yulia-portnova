@@ -9,8 +9,7 @@
 
   transition: box-shadow 0.5s;
 
-  &:hover,
-  &:focus-within {
+  &.is-active {
     box-shadow: 0 0 40px 1px rgba($color-base-primary, 0.5);
   }
 }
@@ -33,7 +32,7 @@
 
   color: $color-base-secondary;
 
-  background: linear-gradient(-45deg, rgba(251, 45, 247, 0.5), $color-base-white, rgba(251, 45, 247, 0.5));
+  background: linear-gradient(-45deg, rgba($color-accent, 0.5), $color-base-white, rgba($color-accent, 0.5));
 
   transition: clip-path 0.8s ease;
 
@@ -43,7 +42,6 @@
   grid-row-start: 1;
 }
 
-.hidden-text:hover .hidden-text__description,
-.hidden-text:focus-within .hidden-text__description {
+.hidden-text.is-active .hidden-text__description {
   clip-path: circle(70.7% at 50% 50%);
 }

@@ -10,7 +10,8 @@
   <link rel="preload" href="fonts/old-standard-tt-400.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/old-standard-tt-700.woff2" as="font" crossorigin="anonymous">
   <title>Юлия Портнова. Анимации.</title>
-  <meta name="description" content="Сайт-портфолио junior фронтенд-разработчика Юлии Портновой. Страница с примерами анимаций.">
+  <meta name="description"
+    content="Сайт-портфолио junior фронтенд-разработчика Юлии Портновой. Страница с примерами анимаций.">
   <!-- <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="favicons/icon.png">
     <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
@@ -49,8 +50,14 @@
           <li class="animation__item">
             <button class="animation__button animation-button" type="button">
               <span class="animation-button__text">Всё получится?</span>
-              <span class="animation-button__text">Yes</span>
+              <span class="animation-button__text">Да</span>
             </button>
+          </li>
+          <li class="animation__item">
+            <div class="animation__button animation__hidden-text hidden-text" tabindex="0">
+              <p class="hidden-text__title">Товар</p>
+              <p class="hidden-text__description">Текст с описанием</p>
+            </div>
           </li>
           <li class="animation__item">
             <button class="animation__button burger-arrow" type="button">
@@ -59,20 +66,22 @@
             </button>
           </li>
           <li class="animation__item">
-            <button class="animation__button star" type="button">Ты звезда!</button>
-          </li>
-          <li class="animation__item">
             <button class="animation__button ball" type="button">
               <span class="visually-hidden">Кнопка с шариком.</span>
             </button>
           </li>
           <li class="animation__item">
-            <div class="animation__button animation__hidden-text hidden-text" tabindex="0" >
-              <p class="hidden-text__title">Товар</p>
-              <p class="hidden-text__description">Текст с описанием</p>
-            </div>
+            <button class="animation__button star" type="button">Ты звезда!</button>
           </li>
-          <li class="animation__item circle-text">
+        </ul>
+        <div class="animation__wrapper">
+          <figure class="animation__ken-burns-effect">
+            <div class="ken-burns-effect">
+              <img class="ken-burns-effect-img" src="images/mountains.jpg" alt="Фото гор." width="1280" height="720">
+            </div>
+            <figcaption class="ken-burns-effect__text">Эффект Кена Бернса</figcaption>
+          </figure>
+          <button class="animation__button animation__circle-text circle-text" type="button">
             <svg class="circle-text__svg" viewBox="0 0 100 100" width="100" height="100">
               <path id="circle" d="M 0,50 a 50,50 0 1,1 0,1 z" />
               <text>
@@ -81,12 +90,8 @@
                 </textpath>
               </text>
             </svg>
-          </li>
-        </ul>
-        <div class="animation__ken-burns-effect ken-burns-effect">
-          <img class="ken-burns-effect-img" src="images/mountains.jpg" alt="Фото гор." width="1280" height="720">
+          </button>
         </div>
-        <p class="ken-burns-effect__text">Эффект Кена Бернса</p>
         <p class="animation__moving-text">Текст, который всё время куда-то едет</p>
       </div>
     </section>
@@ -96,10 +101,12 @@
       <div class="main-footer__contacts">
         <p class="main-footer__title">Мои контакты:</p>
         <a class="main-footer__link" href="tel:+79200244064">+7 (920) 024 40 64</a>
-        <a class="main-footer__link" href="https://t.me/JuliePortnova" target="_blank" rel="noreferrer noopener">Мой телеграм - @JuliePortnova</a>
+        <a class="main-footer__link" href="https://t.me/JuliePortnova" target="_blank" rel="noreferrer noopener">Мой
+          телеграм - @JuliePortnova</a>
         <a class="main-footer__link" href="mailto:yuyul@yandex.ru">Почта - yuyul@yandex.ru</a>
       </div>
-      <a class="main-footer__link main-footer__github" href="https://github.com/YuliaPortnova?tab=repositories" target="_blank" rel="noreferrer noopener">Мои проекты на GitHub</a>
+      <a class="main-footer__link main-footer__github" href="https://github.com/YuliaPortnova?tab=repositories"
+        target="_blank" rel="noreferrer noopener">Мои проекты на GitHub</a>
     </div>
   </footer>
 </body>

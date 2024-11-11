@@ -20,6 +20,8 @@
 .animation__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
   margin: 0 0 40px;
   padding: 40px;
 
@@ -49,6 +51,24 @@
   border: none;
   border-radius: 15px;
   cursor: pointer;
+}
+
+.animation__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  gap: 0px 20px;
+}
+
+.animation__ken-burns-effect {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.animation__circle-text {
+  margin: 40px auto 0;
 }
 
 .animation__moving-text {

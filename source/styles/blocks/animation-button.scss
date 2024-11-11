@@ -30,12 +30,10 @@
   }
 }
 
-.animation-button:hover .animation-button__text:first-child,
-.animation-button:focus .animation-button__text:first-child {
+.animation-button.is-active .animation-button__text:first-child {
   transform: translateY(100%);
 }
 
-.animation-button:hover .animation-button__text:last-child,
-.animation-button:focus .animation-button__text:last-child {
+.animation-button.is-active .animation-button__text:last-child {
   transform: translateY(0);
 }

@@ -1,25 +1,39 @@
 .circle-text {
-  transition: transform 0.8s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: start;
+  min-height: 150px;
+  padding: 20px;
+
   background-color: $color-alt-primary-lighter;
   border-radius: 50%;
-  padding: 20px;
-  align-self: start;
+
+  transition: transform 0.8s ease;
 
   &:hover {
-    transform-origin: center;
     transform: rotate(360deg);
+    transform-origin: center;
   }
 }
 
 .circle-text__svg {
   display: block;
-  overflow: visible;
   width: 100px;
+  overflow: visible;
+
   font-size: 20px;
   letter-spacing: 5px;
+
   fill: $color-base-primary;
+
+  transition: fill 1.8s ease;
 }
 
 .circle-text__svg path {
   fill: none;
+}
+
+.circle-text:hover .circle-text__svg {
+  fill: $color-base-secondary;
 }
