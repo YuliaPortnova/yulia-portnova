@@ -146,6 +146,7 @@
   line-height: 22px;
   text-align: center;
   color: $color-base-primary;
+  transition: color 0.3s ease;
 
   @media (min-width: $vp-768) {
     font-size: 22px;
@@ -189,11 +190,12 @@
   margin-top: auto;
   margin-bottom: 15px;
   overflow: hidden;
-  transform: rotate(0deg);
-  transition: transform 0.8s cubic-bezier(0.5, -5, 0.5, 3);
+  transform: translateY(0);
+  transition: transform 0.3s ease;
 
   &:hover {
-    transform: rotate(0.5deg);
+    transform: translateY(-4px);
+    transition: transform 0.8s ease;
   }
 }
 
