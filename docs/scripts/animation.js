@@ -1,1 +1,1 @@
-var r=document.querySelector(".burger-arrow"),c=document.querySelector(".star"),e=t=>{if(t){let o=()=>{t.classList.toggle("is-active")};t.addEventListener("click",o)}},n=()=>{e(r),e(c)};export{n as initAnimation};
+var i=document.querySelectorAll(".animation__button"),o=t=>{if(t){let n=()=>{t.classList.toggle("is-active")};t.addEventListener("click",n)}},c=()=>{i.forEach(t=>{o(t)})};export{c as initAnimation};
