@@ -1,1 +1,0 @@
-var n=document.querySelector(".main-header"),a=n.querySelector(".main-header__toggle"),e=()=>{let t=()=>{n.classList.toggle("is-open")};a.addEventListener("click",t)};var c=document.querySelectorAll(".animation__button"),r=t=>{if(t){let o=()=>{t.classList.toggle("is-active")};t.addEventListener("click",o)}},i=()=>{c.forEach(t=>{r(t)})};e();i();
