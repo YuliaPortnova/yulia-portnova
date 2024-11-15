@@ -35,18 +35,6 @@
     }
   }
 
-  &--courses {
-    @media (min-width: $vp-768) {
-      grid-column: 1/4;
-    }
-  }
-
-  &--technology {
-    @media (min-width: $vp-768) {
-      grid-column: 5/-1;
-    }
-  }
-
   &--personality {
     @media (min-width: $vp-768) {
       grid-column: 1/4;
@@ -114,12 +102,26 @@
     font-size: 16px;
     line-height: 20px;
   }
+
+  .about__wrapper--certificates & {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+  }
 }
 
 .about__link {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   max-width: 240px;
+}
+
+.about__link img {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   max-height: 330px;
   overflow: hidden;
 
@@ -128,9 +130,21 @@
   filter: invert(0%);
 
   transition: filter 0.5s ease;
+}
 
-  &:hover {
-    filter: invert(100%);
+.about__link:hover img {
+  filter: invert(100%);
+}
+
+.about__link-header {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $ff-old-standard-tt;
+  text-decoration: none;
+
+  @media (min-width: $vp-768) {
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
