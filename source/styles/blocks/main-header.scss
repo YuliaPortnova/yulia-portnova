@@ -44,14 +44,14 @@
   transition: transform 0.3s ease;
 
   .is-open & {
-    transform: scaleX(1);
+    transform: scaleY(1);
   }
 
   @media (min-width: $vp-768) {
     position: static;
     z-index: 0;
 
-    transform: scaleX(1);
+    transform: scaleY(1);
 
     background-color: transparent;
     transition: none;
@@ -92,6 +92,7 @@
 }
 
 .main-header__link {
+  position: relative;
   display: block;
   margin: 0 auto;
   padding: 30px 20px;
@@ -117,7 +118,7 @@
     color: $color-base-primary;
   }
 
-  &[href]:focus {
+  &[href]:focus-visible {
     color: $color-base-primary;
     outline: none;
   }
@@ -135,13 +136,11 @@
     position: absolute;
     z-index: -1;
 
-    background-color: $color-alt-primary-lighter;
     transform: scaleY(0);
     transform-origin: center;
 
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
     inset: 0;
-
 
     @media (min-width: $vp-768) {
       border-radius: 12px;
@@ -153,6 +152,7 @@
 }
 
 .main-header__link:hover::before {
+  background-color: $color-alt-primary-lighter;
   transform: scaleY(1);
 
   @media (min-width: $vp-768) {
@@ -161,6 +161,7 @@
 }
 
 .main-header__link:focus-visible::before {
+  background-color: $color-alt-primary-lighter;
   transform: scaleY(1);
 
   @media (min-width: $vp-768) {
@@ -169,7 +170,7 @@
 }
 
 .main-header__toggle {
-  width: 100px;
+  width: 60px;
   height: 60px;
   margin-left: auto;
 

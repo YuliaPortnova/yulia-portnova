@@ -107,7 +107,7 @@
     margin: 0;
     padding: 0;
 
-    list-style-type: none;
+    list-style-type: auto;
   }
 }
 
@@ -116,6 +116,8 @@
   flex-wrap: wrap;
   align-items: center;
   max-width: 240px;
+  text-decoration: none;
+  color: $color-base-black;
 }
 
 .about__link img {
@@ -137,12 +139,13 @@
 }
 
 .about__link-header {
+  margin: 0 0 10px;
   font-size: 14px;
   line-height: 18px;
   font-family: $ff-old-standard-tt;
-  text-decoration: none;
 
   @media (min-width: $vp-768) {
+    margin-bottom: 20px;
     font-size: 16px;
     line-height: 20px;
   }
