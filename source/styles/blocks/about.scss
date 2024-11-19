@@ -7,7 +7,7 @@
   padding-top: 30px;
   padding-bottom: 30px;
 
-  gap: 25px;
+  gap: 40px;
 
   @media (min-width: $vp-768) {
     display: grid;
@@ -63,6 +63,9 @@
 
   @media (min-width: $vp-768) {
     margin-bottom: 20px;
+
+    font-size: 25px;
+    line-height: 30px;
   }
 
   @media (min-width: $vp-1440) {
@@ -95,9 +98,11 @@
   .about__wrapper--technology & {
     @media (min-width: $vp-768) {
       flex-direction: row;
-      gap: 50px;
-      list-style-type: none;
       padding: 0;
+
+      list-style-type: none;
+
+      gap: 50px;
     }
   }
 }
@@ -108,8 +113,8 @@
   font-family: $ff-old-standard-tt;
 
   @media (min-width: $vp-768) {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 18px;
+    line-height: 21px;
   }
 
   .about__wrapper--certificates & {
@@ -122,8 +127,9 @@
   .about__wrapper--technology & {
     @media (min-width: $vp-768) {
       padding: 5px;
-      border-bottom: 3px double $color-base-primary;
+
       border-top: 4px double $color-alt-primary-lighter;
+      border-bottom: 4px double $color-alt-primary-lighter;
     }
   }
 }
@@ -134,8 +140,10 @@
   align-items: center;
   max-width: 240px;
   height: 100%;
-  text-decoration: none;
+
   color: $color-base-black;
+  text-decoration: none;
+
   transition: color 0.3s ease;
 
   &:hover {
@@ -162,12 +170,14 @@
 
 .about__link-header {
   margin: 0 0 10px;
+
   font-size: 14px;
   line-height: 18px;
   font-family: $ff-old-standard-tt;
 
   @media (min-width: $vp-768) {
     margin-bottom: 10px;
+
     font-size: 16px;
     line-height: 20px;
   }
