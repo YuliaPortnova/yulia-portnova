@@ -76,11 +76,39 @@
   background-color: $color-base-white;
 }
 
-.main-footer__github {
-  font-size: 16px;
-
+.main-footer__wrapper {
   @media (min-width: $vp-768) {
     justify-self: end;
+  }
+}
+
+.main-footer__github {
+  display: inline-block;
+
+  font-size: 16px;
+}
+
+.main-footer__copyright {
+  font-weight: 600;
+  font-size: 14px;
+  color: $color-base-white;
+
+  @media (min-width: $vp-768) {
+    margin-top: auto;
+
+    justify-self: end;
+  }
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 192px;
+    height: 213px;
+
+    background: $color-base-primary;
+
+    mask-image: url("../../icons/footer-decor.svg");
   }
 }
 
