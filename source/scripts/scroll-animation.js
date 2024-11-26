@@ -1,5 +1,6 @@
 const headerElement = document.querySelector('.main-header:not(.main-header--not-sticky)');
 const animateAppearanceElements = document.querySelectorAll('.projects__project');
+const scrollToTopButton = document.querySelector('.scroll-to');
 const SCROLLED_HEADER_START = 500;
 const Y_TRANSLATION = 120;
 const screenHeight = document.documentElement.clientHeight;
@@ -23,13 +24,15 @@ const animateAppearance = () => {
   }
 };
 
-const animateHeader = () => {
+const animateHeader = (delta, scrollTop) => {
   if (headerElement) {
-    const scrollTop = window.scrollY;
-    const delta = scrollTop - scrollStarted;
-    // console.log(scrollTop, SCROLLED_HEADER_START, delta);
     headerElement.classList.toggle('main-header--sticky', (scrollTop >= SCROLLED_HEADER_START) && (delta > 0));
-    scrollStarted = scrollTop;
+  }
+};
+
+const animateScrollToTopButton = (delta, scrollTop) => {
+  if (scrollToTopButton) {
+    scrollToTopButton.classList.toggle('is-visible', (scrollTop >= SCROLLED_HEADER_START) && (delta < 0));
   }
 };
 
@@ -37,8 +40,14 @@ const initScrollAnimation = () => {
   animateAppearance();
 
   const onWindowScroll = () => {
-    animateHeader();
+    const scrollTop = window.scrollY;
+    const delta = scrollTop - scrollStarted;
+
+    animateHeader(delta, scrollTop);
     animateAppearance();
+    animateScrollToTopButton(delta, scrollTop);
+
+    scrollStarted = scrollTop;
   };
 
   window.addEventListener('scroll', onWindowScroll);
