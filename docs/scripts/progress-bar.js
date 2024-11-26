@@ -1,0 +1,1 @@
+var o=document.querySelector(".animation__progress-bar"),r=()=>{if(!o)return null;let e=document.documentElement.scrollHeight-document.documentElement.clientHeight;window.addEventListener("scroll",()=>{let t=(window.scrollY/e).toFixed(2);o.style.transform=`scaleX(${t})`})};export{r as initProgressBar};
