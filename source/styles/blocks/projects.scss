@@ -142,7 +142,7 @@
   }
 
   &.is-active {
-    transform: translate(0px, 0px);
+    transform: translate(0, 0);
     opacity: 1;
   }
 }

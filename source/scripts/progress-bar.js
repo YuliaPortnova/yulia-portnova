@@ -5,7 +5,7 @@ const initProgressBar = () => {
     return null;
   }
 
-  const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+  const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
   window.addEventListener('scroll', () => {
     const windowScroll = window.scrollY;
