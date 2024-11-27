@@ -1,4 +1,4 @@
-import { throttle } from './utils/throttle';
+import { throttle } from './utilities';
 
 const progressBar = document.querySelector('.animation__progress-bar');
 
@@ -10,15 +10,17 @@ const recalculateProgress = () => {
   progressBar.style.transform = `scaleX(${progressBarWidth})`;
 };
 
-const throttledRecalculateProgress = throttle(recalculateProgress, 50);
-
 const initProgressBar = () => {
   if (!progressBar) {
     return null;
   }
 
-  window.addEventListener('scroll', throttledRecalculateProgress);
-  window.addEventListener('resize', throttledRecalculateProgress);
+  window.addEventListener('scroll', throttle(() => {
+    recalculateProgress();
+  }));
+  window.addEventListener('resize', throttle(() => {
+    recalculateProgress();
+  }));
 };
 
 export { initProgressBar };

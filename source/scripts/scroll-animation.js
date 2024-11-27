@@ -1,4 +1,4 @@
-import { throttle } from './utils/throttle';
+import { throttle } from './utilities';
 
 const headerElement = document.querySelector('.main-header:not(.main-header--not-sticky)');
 const animateAppearanceElements = document.querySelectorAll('.projects__project');
@@ -38,23 +38,19 @@ const animateScrollToTopButton = (delta, scrollTop) => {
   }
 };
 
-const throttledAnimateAppearance = throttle(animateAppearance, 50);
-
 const initScrollAnimation = () => {
   animateAppearance();
 
-  const onWindowScroll = () => {
+  window.addEventListener('scroll', throttle(() => {
     const scrollTop = window.scrollY;
     const delta = scrollTop - scrollStarted;
 
     animateHeader(delta, scrollTop);
-    throttledAnimateAppearance();
+    animateAppearance();
     animateScrollToTopButton(delta, scrollTop);
 
     scrollStarted = scrollTop;
-  };
-
-  window.addEventListener('scroll', onWindowScroll);
+  }));
 };
 
 export { initScrollAnimation };
