@@ -4,22 +4,21 @@ const headerElement = document.querySelector('.main-header:not(.main-header--not
 const animateAppearanceElements = document.querySelectorAll('.projects__project');
 const scrollToTopButton = document.querySelector('.scroll-to');
 const SCROLLED_HEADER_START = 500;
-const Y_TRANSLATION = 120;
 const screenHeight = document.documentElement.clientHeight;
 
 let scrollStarted = 0;
 
-const isVisible = (element) => {
+const isHalfVisible = (element) => {
   const elementBoundary = element.getBoundingClientRect();
   const top = elementBoundary.top;
-  const bottom = elementBoundary.bottom;
-  return (top >= 0) && (bottom - Y_TRANSLATION <= screenHeight);
+  const height = elementBoundary.height;
+  return (top + height >= 0) && (top + 0.5 * height <= screenHeight);
 };
 
 const animateAppearance = () => {
   if (animateAppearanceElements) {
     animateAppearanceElements.forEach((element) => {
-      if (isVisible(element)) {
+      if (isHalfVisible(element)) {
         element.classList.add('is-active');
       }
     });
