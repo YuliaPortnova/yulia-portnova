@@ -1,50 +1,92 @@
 .hero-animation {
   position: relative;
+  position: relative;
+
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+
   background-color: $color-base-secondary;
-  min-height: 200px;
+  perspective: 1px;
+}
 
-  @media (min-width: $vp-768) {
-    min-height: 260px;
+.hero-animation__layer {
+  position: absolute;
+
+  height: 100%;
+
+  inset: 0;
+}
+
+.hero-animation__image {
+  transform: translateZ(0);
+
+  object-fit: cover;
+
+  @media(max-width: 768px) {
+    height: calc(100% - 150px);
   }
+}
 
-  @media (min-width: $vp-1440) {
-    min-height: 550px;
+.hero-animation__image img {
+  display: block;
+  width: 100%;
+
+  object-fit: cover;
+
+  height: calc(100% + 800px);
+  max-height: calc(100% + 800px);
+}
+
+.hero-animation__content {
+  color: $color-base-secondary;
+
+  transform: translateZ(-2px);
+  transform: translateZ(-2px) translateX(100px) translateY(300px) scale(3);
+
+  @media (max-width: 768px) {
+    transform: translateZ(-2px) translateX(20px) translateY(300px) scale(3);
   }
 }
 
 .hero-animation__title {
-  text-align: right;
-  font-size: 45px;
-  line-height: 55px;
-  margin: 0;
+  position: relative;
 
-  @media (min-width: $vp-768) {
+  display: inline-flex;
+  margin: 40vh 0 0;
+  padding: 10px 12px;
+
+  font-size: 35px;
+  line-height: 37px;
+
+  @media (min-width: 500px) {
     font-size: 65px;
     line-height: 70px;
   }
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-768) {
+    padding: 15px 60px;
+
     font-size: 85px;
-    line-height: 90px;
+    line-height: 85px;
   }
-}
 
-.hero-animation__container {
-  position: relative;
-  z-index: 1;
-  color: $color-base-white;
-}
+  @media (min-width: $vp-1440) {
+    padding: 20px 80px;
+    transform: translateX(-100px);
 
-.hero-animation__image-container {
-  overflow: hidden;
-}
+    font-size: 150px;
+    line-height: 170px;
+  }
 
-.hero-animation__image-container img {
-  position: absolute;
-  min-height: 100%;
-  width: 100%;
-  object-fit: cover;
-  height: revert-layer;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
 
-  
+    background-color: rgba($color-base-white, 0.4);
+    border-radius: 80px;
+
+    inset: 0;
+  }
 }
