@@ -42,7 +42,29 @@
     </div>
   </header>
   <main>
-    <h1 class="visually-hidden">Сайт портфолио Юлии Портновой: примеры анимаций.</h1>
+    <section class="hero hero-animation parallax">
+        <!-- <div class="parallax-layer parallax__image hero-animation__image-container"> -->
+        <div class="parallax-layer parallax-image">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="images/elbrus-tablet@1x.webp 1x, images/elbrus-tablet@2x.webp 2x" width="1440"
+              height="550">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="images/elbrus-tablet@1x.webp 1x, images/elbrus-tablet@2x.webp 2x" width="768" height="260">
+            <source type="image/webp" srcset="images/elbrus-mobile@1x.webp 1x, images/elbrus-mobile@2x.webp 2x" width="320"
+              height="200">
+            <source type="image/jpeg" media="(min-width: 1440px)"
+              srcset="images/elbrus-tablet@1x.jpg 1x, images/elbrus-tablet@2x.jpg 2x" width="1440" height="550">
+            <source type="image/jpeg" media="(min-width: 768px)"
+              srcset="images/elbrus-tablet@1x.jpg 1x, images/elbrus-tablet@2x.jpg 2x" width="768" height="260">
+            <img src="images/elbrus-mobile@1x.jpg" srcset="images/elbrus-mobile@2x.jpg 2x" width="320" height="200" alt="">
+          </picture>
+        </div>
+        <!-- <div class="hero__container hero-animation__container page__leveler"> -->
+        <div class="parallax-layer parallax-text">
+          <h1 class="hero-animation__title">Анимации</h1>
+        </div>
+    </section>
     <section class="animation">
       <div class="animation__container page__leveler">
         <h2 class="animation__title title">CSS анимации</h2>

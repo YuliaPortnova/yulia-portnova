@@ -1,0 +1,50 @@
+.hero-animation {
+  position: relative;
+  background-color: $color-base-secondary;
+  min-height: 200px;
+
+  @media (min-width: $vp-768) {
+    min-height: 260px;
+  }
+
+  @media (min-width: $vp-1440) {
+    min-height: 550px;
+  }
+}
+
+.hero-animation__title {
+  text-align: right;
+  font-size: 45px;
+  line-height: 55px;
+  margin: 0;
+
+  @media (min-width: $vp-768) {
+    font-size: 65px;
+    line-height: 70px;
+  }
+
+  @media (min-width: $vp-1440) {
+    font-size: 85px;
+    line-height: 90px;
+  }
+}
+
+.hero-animation__container {
+  position: relative;
+  z-index: 1;
+  color: $color-base-white;
+}
+
+.hero-animation__image-container {
+  overflow: hidden;
+}
+
+.hero-animation__image-container img {
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+  height: revert-layer;
+
+  
+}
