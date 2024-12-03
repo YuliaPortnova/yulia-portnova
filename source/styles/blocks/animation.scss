@@ -70,15 +70,24 @@
 .animation__wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 40px;
 
   gap: 0 20px;
+
+  @media (min-width: $vp-768) {
+    gap: 40px;
+  }
+
+  @media (min-width: $vp-1440) {
+    gap: 50px;
+  }
 }
 
 .animation__ken-burns-effect {
   width: 100%;
   max-width: 640px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .animation__circle-text {
