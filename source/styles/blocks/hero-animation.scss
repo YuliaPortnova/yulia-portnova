@@ -1,6 +1,5 @@
 .hero-animation {
   position: relative;
-  position: relative;
 
   height: 100vh;
   overflow: hidden;
@@ -23,7 +22,7 @@
 
   object-fit: cover;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     height: calc(100% - 150px);
   }
 }
@@ -41,11 +40,10 @@
 .hero-animation__content {
   color: $color-base-secondary;
 
-  transform: translateZ(-2px);
-  transform: translateZ(-2px) translateX(100px) translateY(300px) scale(3);
+  transform: translateZ(-2px) scale(3);
 
   @media (max-width: 768px) {
-    transform: translateZ(-2px) translateX(20px) translateY(300px) scale(3);
+    transform: translateZ(-2px) scale(3);
   }
 }
 
@@ -53,7 +51,7 @@
   position: relative;
 
   display: inline-flex;
-  margin: 40vh 0 0;
+  margin: 55vh 0 0;
   padding: 10px 12px;
 
   font-size: 35px;
@@ -73,7 +71,7 @@
 
   @media (min-width: $vp-1440) {
     padding: 20px 80px;
-    transform: translateX(-100px);
+    transform: translateX(-80px);
 
     font-size: 150px;
     line-height: 170px;
