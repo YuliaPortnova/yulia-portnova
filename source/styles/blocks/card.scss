@@ -23,7 +23,7 @@
   backface-visibility: hidden;
   transform-style: preserve-3d;
 
-  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1), color 0.3s ease;
 }
 
 .card__front {
@@ -31,7 +31,8 @@
   transform: rotateX(0deg);
 }
 
-.card:hover .card__front {
+.card:hover .card__front,
+.card:focus-visible .card__front {
   transform: rotateX(-180deg);
 }
 
@@ -47,6 +48,11 @@
   inset: 0;
 }
 
-.card:hover .card__back {
+.card:active .card__back {
+  color: $color-base-grey;
+}
+
+.card:hover .card__back,
+.card:focus-visible .card__back {
   transform: rotateX(0deg);
 }
