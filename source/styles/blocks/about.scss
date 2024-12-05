@@ -121,7 +121,7 @@
     margin: 0;
     padding: 0;
 
-    list-style-type: auto;
+    list-style-type: none;
   }
 
   .about__wrapper--technology & {
@@ -136,36 +136,23 @@
 
 .about__link {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   max-width: 240px;
   height: 100%;
 
-  color: $color-base-black;
   text-decoration: none;
-
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: $color-base-secondary;
-  }
 }
 
 .about__link img {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: block;
   overflow: hidden;
 
-  border: 3px dotted $color-base-primary;
   border-radius: 20px;
-  filter: invert(0%);
-
-  transition: filter 0.5s ease;
 }
 
-.about__link:hover img {
-  filter: invert(100%);
+.about__link-back {
+  position: relative;
+  text-align: center;
+  padding: 50px 30px;
 }
 
 .about__link-header {
@@ -180,6 +167,28 @@
 
     font-size: 16px;
     line-height: 20px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    background-image: url("../../icons/separatop.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 40px;
+  }
+
+  &::before {
+    top: -40px;
+    transform: translateX(-50%) rotate(180deg);
+  }
+
+  &::after {
+    bottom: -40px;
+    transform: translateX(-50%);
   }
 }
 
