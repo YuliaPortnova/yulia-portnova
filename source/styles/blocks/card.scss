@@ -33,10 +33,14 @@
 
 .card:hover .card__front,
 .card:focus-visible .card__front {
-  transform: rotateX(-180deg);
+  @media (min-width: $vp-768) {
+    transform: rotateX(-180deg);
+  }
 }
 
 .card__back {
+  display: none;
+
   position: absolute;
 
   color: $color-base-white;
@@ -46,6 +50,10 @@
   transform: rotateX(180deg);
 
   inset: 0;
+
+  @media (min-width: $vp-768) {
+    display: flex;
+  }
 }
 
 .card:active .card__back {
@@ -54,5 +62,7 @@
 
 .card:hover .card__back,
 .card:focus-visible .card__back {
-  transform: rotateX(0deg);
+  @media (min-width: $vp-768) {
+    transform: rotateX(0deg);
+  }
 }

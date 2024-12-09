@@ -11,47 +11,88 @@
 
 .hero-animation__layer {
   position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 
-  height: 100%;
+  &--1 {
+    height: 100%;
 
-  inset: 0;
-}
+    transform: translateZ(0);
 
-.hero-animation__image {
-  transform: translateZ(0);
+    object-fit: cover;
 
-  object-fit: cover;
+    @media (max-width: 768px) {
+      height: calc(100% - 150px);
+    }
+  }
 
-  @media (max-width: 768px) {
-    height: calc(100% - 150px);
+  &--2 {
+    margin: 55vh 0 0;
+
+    color: $color-base-secondary;
+
+    transform: translateZ(-4px) scale(5);
+  }
+
+  &--3 {
+    width: max-content;
+
+    font-size: 40px;
+    line-height: 44px;
+    color: $color-base-black;
+
+    transform: translateZ(-1px) scale(2) translate(0, 500px);
+    transform-origin: 0 0;
+
+    @media (min-width: $vp-768) {
+      transform: translateZ(-1px) scale(2) translate(100px, 800px);
+    }
+
+    @media (min-width: $vp-1440) {
+      transform: translateZ(-1px) scale(2) translate(500px, 300px);
+    }
+  }
+
+  &--4 {
+    width: max-content;
+
+    font-size: 40px;
+    line-height: 44px;
+    color: $color-base-primary;
+
+    transform: translateZ(-2px) scale(3) translate(0, 500px);
+  }
+
+  &--5 {
+    width: max-content;
+
+    font-size: 40px;
+    line-height: 44px;
+    color: $color-base-secondary;
+
+    transform: translateZ(-3px) scale(4) translate(0, 500px);
+
+    @media (min-width: $vp-768) {
+      transform-origin: 0 0;
+      transform: translateZ(-3px) scale(4) translate(0, -100px);
+    }
   }
 }
 
-.hero-animation__image img {
+.hero-animation__layer--1 img {
   display: block;
   width: 100%;
-
-  object-fit: cover;
-
   height: calc(100% + 800px);
   max-height: calc(100% + 800px);
-}
 
-.hero-animation__content {
-  color: $color-base-secondary;
-
-  transform: translateZ(-2px) scale(3);
-
-  @media (max-width: 768px) {
-    transform: translateZ(-2px) scale(3);
-  }
+  object-fit: cover;
 }
 
 .hero-animation__title {
   position: relative;
 
   display: inline-flex;
-  margin: 55vh 0 0;
   padding: 10px 12px;
 
   font-size: 35px;
@@ -71,10 +112,11 @@
 
   @media (min-width: $vp-1440) {
     padding: 20px 80px;
-    transform: translateX(-80px);
 
     font-size: 150px;
     line-height: 170px;
+
+    transform: translateX(-80px);
   }
 
   &::before {
@@ -82,7 +124,41 @@
     position: absolute;
     z-index: -1;
 
-    background-color: rgba($color-base-white, 0.4);
+    background-color: rgba($color-base-white, 0.8);
+    border-radius: 80px;
+
+    inset: 0;
+  }
+}
+
+.hero-animation__text {
+  margin: 0;
+  padding: 10px 12px;
+  font-size: 18px;
+  line-height: 20px;
+
+  @media (min-width: 500px) {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $vp-768) {
+    font-size: 30px;
+    line-height: 34px;
+    padding: 13px 40px;
+  }
+
+  @media (min-width: $vp-1440) {
+    font-size: 34px;
+    line-height: 39px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    background-color: rgba($color-base-white, 0.6);
     border-radius: 80px;
 
     inset: 0;

@@ -1,14 +1,14 @@
 .scroll-to {
   position: fixed;
-  right: 60px;
-  bottom: 30px;
+  bottom: 35px;
+  right: 70px;
   z-index: 10;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
 
   border: 2px solid $color-base-primary;
   border-radius: 50%;
@@ -16,14 +16,6 @@
   opacity: 0;
 
   transition: opacity 0.6s ease;
-
-  @media (min-width: $vp-768) {
-    bottom: 35px;
-    right: 70px;
-
-    width: 50px;
-    height: 50px;
-  }
 
   @media (min-width: $vp-1440) {
     bottom: 60px;
