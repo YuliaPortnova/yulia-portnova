@@ -36,6 +36,12 @@
   }
 
   &--personality {
+    background-image: url("../../icons/background-1.svg");
+
+    background-size: cover;
+    padding: 100px 70px 100px 100px;
+    color: $color-light-gray;
+
     @media (min-width: $vp-768) {
       grid-column: 1/4;
     }
