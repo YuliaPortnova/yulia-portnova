@@ -49,7 +49,7 @@
   border: 4px solid $color-alt-primary-lighter;
   border-radius: 20px;
 
-  gap: 30px;
+  gap: 50px;
   place-content: center;
 }
 
@@ -157,15 +157,15 @@
 
 @keyframes pulsate {
   0% {
-      r: 8px;
+    r: 8px;
   }
 
   50% {
-      r: 5px;
+    r: 5px;
   }
 
   100% {
-      r: 8px;
+    r: 8px;
   }
 }
 
@@ -193,6 +193,57 @@
 
 @keyframes multiple-spin {
   to {
-      stroke-dashoffset: var(--stroke-dashoffset);
+    stroke-dashoffset: var(--stroke-dashoffset);
+  }
+}
+
+.animation__button-shape {
+  display: grid;
+  place-items: center;
+
+  max-width: 230px;
+  padding: 10px 15px;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  line-height: 20px;
+  color: $color-base-primary;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-base-secondary;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.animation__button-shape svg {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.animation__button-shape span {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.animation__button-shape rect {
+  stroke: $color-base-primary;
+  stroke-width: 4px;
+  stroke-dasharray: 100px 500px;
+  stroke-dashoffset: -350px;
+}
+
+.animation__button-shape:hover rect {
+  animation: shape 1s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shape {
+  to {
+    stroke-dasharray: 600px 0;
+    stroke-dashoffset: 0;
   }
 }
