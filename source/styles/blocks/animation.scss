@@ -201,11 +201,11 @@
   display: grid;
   place-items: center;
 
-  max-width: 230px;
-  padding: 10px 15px;
+  max-width: 220px;
+  padding: 0;
   border: none;
   background-color: transparent;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 20px;
   color: $color-base-primary;
   cursor: pointer;
@@ -216,8 +216,8 @@
   }
 
   @media (min-width: 768px) {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 22px;
+    line-height: 24px;
   }
 }
 
@@ -226,6 +226,7 @@
 }
 
 .animation__button-shape span {
+  padding: 0 20px;
   grid-area: 1 / 1 / 2 / 2;
 }
 
