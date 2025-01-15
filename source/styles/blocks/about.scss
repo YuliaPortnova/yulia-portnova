@@ -41,9 +41,12 @@
     background-size: cover;
     padding: 100px 70px 100px 100px;
     color: $color-light-gray;
+    max-width: 430px;
 
     @media (min-width: $vp-768) {
       grid-column: 1/4;
+      min-width: 350px;
+      max-width: 510px;
     }
   }
 
