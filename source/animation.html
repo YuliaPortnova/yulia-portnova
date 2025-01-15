@@ -43,21 +43,22 @@
   </header>
   <main>
     <section class="hero-animation">
-        <div class="hero-animation__layer hero-animation__layer--1">
-          <img src="images/kislovodsk.jpg" alt="Вид на горы для иллюстрации параллакс-эффекта." width="1512" height="2016">
-        </div>
-        <div class="hero-animation__layer hero-animation__layer--2 page__leveler">
-          <h1 class="hero-animation__title">Анимации</h1>
-        </div>
-        <div class="hero-animation__layer hero-animation__layer--3 page__leveler">
-          <p class="hero-animation__text">parallax</p>
-        </div>
-        <div class="hero-animation__layer hero-animation__layer--4 page__leveler">
-          <p class="hero-animation__text">transition</p>
-        </div>
-        <div class="hero-animation__layer hero-animation__layer--5 page__leveler">
-          <p class="hero-animation__text">@keyframes</p>
-        </div>
+      <div class="hero-animation__layer hero-animation__layer--1">
+        <img src="images/kislovodsk.jpg" alt="Вид на горы для иллюстрации параллакс-эффекта." width="1512"
+          height="2016">
+      </div>
+      <div class="hero-animation__layer hero-animation__layer--2 page__leveler">
+        <h1 class="hero-animation__title">Анимации</h1>
+      </div>
+      <div class="hero-animation__layer hero-animation__layer--3 page__leveler">
+        <p class="hero-animation__text">parallax</p>
+      </div>
+      <div class="hero-animation__layer hero-animation__layer--4 page__leveler">
+        <p class="hero-animation__text">transition</p>
+      </div>
+      <div class="hero-animation__layer hero-animation__layer--5 page__leveler">
+        <p class="hero-animation__text">@keyframes</p>
+      </div>
     </section>
     <section class="animation">
       <div class="animation__container page__leveler">
@@ -120,7 +121,7 @@
             </ul>
             <figcaption class="ken-burns-effect__text">CSS для 3D</figcaption>
           </figure>
-          <div class="animation__parallax-mouse-move parallax-mouse-move">
+          <figure class="animation__parallax-mouse-move parallax-mouse-move">
             <ul class="parallax-mouse-move__container">
               <li class="parallax-mouse-move__item parallax-layer" data-speed="0.1">1</li>
               <li class="parallax-mouse-move__item parallax-layer" data-speed="0.05">2</li>
@@ -144,10 +145,36 @@
               <li class="parallax-mouse-move__item parallax-layer" data-speed="0.05">20</li>
             </ul>
             <figcaption class="parallax-mouse-move__text">Смещение элементов при движении мыши</figcaption>
-          </div>
+          </figure>
         </div>
       </div>
       <p class="animation__moving-text">Текст, который всё время куда-то едет</p>
+    </section>
+    <section class="animation">
+      <div class="animation__container page__leveler">
+        <h2 class="animation__title title">SVG анимации</h2>
+        <ul class="animation__list">
+          <li class="animation__item animation__spinner">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+              <rect class="animation__spinner-rect" fill="transparent" x="8" y="8" height="85" width="85" />
+            </svg>
+          </li>
+          <li class="animation__item">
+            <svg class="animation__preloader animation__preloader--1" viewBox="0 0 60 30" width="120" height="60">
+              <circle cx="30" cy="30" r="8" />
+              <circle cx="55" cy="30" r="8" />
+              <circle cx="80" cy="30" r="8" />
+            </svg>
+          </li>
+          <li class="animation__item">
+            <svg class="animation__preloader animation__preloader--2" viewBox="0 0 60 60" width="120" height="120">
+              <circle cx="30" cy="30" r="26" fill="transparent" />
+              <circle cx="30" cy="30" r="20" fill="transparent" />
+              <circle cx="30" cy="30" r="14" fill="transparent" />
+            </svg>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
   <footer class="page__main-footer main-footer">
@@ -161,7 +188,7 @@
       </div>
       <div class="main-footer__wrapper">
         <a class="main-footer__link main-footer__github" href="https://github.com/YuliaPortnova?tab=repositories"
-        target="_blank" rel="noreferrer noopener">Мои проекты на GitHub</a>
+          target="_blank" rel="noreferrer noopener">Мои проекты на GitHub</a>
         <p class="main-footer__copyright">© Юлия Портнова, 2024</p>
       </div>
     </div>
