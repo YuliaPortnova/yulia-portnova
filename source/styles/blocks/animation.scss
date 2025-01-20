@@ -248,3 +248,12 @@
     stroke-dashoffset: 0;
   }
 }
+
+.animation__waves {
+  background-color: $color-base-primary;
+  border: 3px solid $color-base-secondary;
+  margin-top: 35px;
+  border-radius: 0 50% 50%;
+  transform:rotate(45deg);
+  box-shadow:0 0 0 2px $color-base-white,0 0 0 4px $color-base-secondary;
+}
