@@ -124,19 +124,20 @@
 
 .animation__spinner {
   display: flex;
-  margin: 10px 20px;
   height: 100px;
+  margin: 10px 20px;
 
   background-color: $color-base-primary;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 }
 
 .animation__spinner-rect {
+  animation: spinner 4s linear infinite;
+
   stroke: $color-base-white;
   stroke-dasharray: 85px;
-  stroke-width: 3px;
   stroke-linecap: round;
-  animation: spinner 4s linear infinite;
+  stroke-width: 3px;
 }
 
 @keyframes spinner {
@@ -146,9 +147,11 @@
 }
 
 .animation__preloader--1 circle {
-  fill: $color-base-primary;
   transform-origin: center;
+
   animation: pulsate 1.6s linear infinite;
+
+  fill: $color-base-primary;
 }
 
 .animation__preloader--1 circle:nth-child(even) {
@@ -170,9 +173,10 @@
 }
 
 .animation__preloader--2 circle {
+  animation: multiple-spin 2s linear infinite;
+
   stroke: $color-base-primary;
   stroke-width: 1px;
-  animation: multiple-spin 2s linear infinite;
 }
 
 .animation__preloader--2 circle:nth-child(1) {
@@ -199,17 +203,20 @@
 
 .animation__button-shape {
   display: grid;
-  place-items: center;
-
   max-width: 220px;
   padding: 0;
-  border: none;
-  background-color: transparent;
+
   font-size: 20px;
   line-height: 20px;
   color: $color-base-primary;
+
+  background-color: transparent;
+  border: none;
   cursor: pointer;
+
   transition: color 0.3s ease;
+
+  place-items: center;
 
   &:hover {
     color: $color-base-secondary;
@@ -227,18 +234,20 @@
 
 .animation__button-shape span {
   padding: 0 20px;
+
   grid-area: 1 / 1 / 2 / 2;
 }
 
 .animation__button-shape rect {
   stroke: $color-base-primary;
-  stroke-width: 4px;
   stroke-dasharray: 100px 500px;
   stroke-dashoffset: -350px;
+  stroke-width: 4px;
 }
 
 .animation__button-shape:hover rect {
   animation: shape 1s ease;
+
   animation-fill-mode: forwards;
 }
 
@@ -250,10 +259,11 @@
 }
 
 .animation__waves {
+  margin-top: 35px;
+
   background-color: $color-base-primary;
   border: 3px solid $color-base-secondary;
-  margin-top: 35px;
   border-radius: 0 50% 50%;
-  transform:rotate(45deg);
-  box-shadow:0 0 0 2px $color-base-white,0 0 0 4px $color-base-secondary;
+  box-shadow: 0 0 0 2px $color-base-white,0 0 0 4px $color-base-secondary;
+  transform: rotate(45deg);
 }

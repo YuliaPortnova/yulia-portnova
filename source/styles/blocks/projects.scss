@@ -308,3 +308,9 @@
   line-height: 12px;
   text-align: center;
 }
+
+.projects__cursor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+}

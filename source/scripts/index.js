@@ -3,6 +3,7 @@ import { initAnimation } from './animation.js';
 import { initScrollAnimation } from './scroll-animation.js';
 import { initProgressBar } from './progress-bar.js';
 import { activateParallaxMouseMove } from './parallax-mouse-move.js';
+import { initCursor } from './cursor.js';
 
 const parallaxMouseMoveContainer = document.querySelector('.parallax-mouse-move');
 
@@ -11,3 +12,4 @@ initScrollAnimation();
 initProgressBar();
 initMainMenu();
 activateParallaxMouseMove(parallaxMouseMoveContainer);
+initCursor();
