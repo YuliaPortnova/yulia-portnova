@@ -1,5 +1,6 @@
 .projects {
   background-color: $color-light-gray;
+  cursor: none;
 }
 
 .projects__container {
@@ -133,8 +134,8 @@
   transform: translate(0, 70px);
   opacity: 0;
 
-  --transition-delay: 0s;
   transition: box-shadow 0.7s ease, border-color 0.5s ease, transform 0.5s ease var(--transition-delay), opacity 0.5s ease var(--transition-delay);
+  --transition-delay: 0s;
 
   @media (min-width: $vp-768) {
     transform: translate(-40px, 70px);
@@ -230,18 +231,20 @@
   margin-bottom: 15px;
   overflow: hidden;
 
-  transform: translateY(0);
-
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: translateY(-8px);
-  }
+  cursor: none;
 }
 
 .projects__img-link img {
   display: block;
   margin: 0 auto;
+
+  transform: scale(1);
+
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.025);
+  }
 }
 
 .projects__links {
@@ -265,6 +268,7 @@
 
   border: 2px solid $color-alt-primary-lighter;
   border-radius: 15px;
+  cursor: none;
 
   transition: background-color 0.3s ease, border-color 0.3s ease;
 
@@ -311,6 +315,13 @@
 
 .projects__cursor {
   position: absolute;
-  pointer-events: none;
   z-index: 10;
+
+  pointer-events: none;
+}
+
+.projects__cursor circle {
+  transform-origin: center;
+
+  transition: transform 0.4s ease;
 }

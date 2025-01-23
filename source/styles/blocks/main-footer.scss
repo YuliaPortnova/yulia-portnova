@@ -2,6 +2,10 @@
   color: $color-base-white;
 
   background-color: $color-base-secondary;
+
+  &--custom-cursor {
+    cursor: none;
+  }
 }
 
 .main-footer__container {
@@ -43,6 +47,10 @@
   text-decoration: none;
 
   border-radius: 15px;
+
+  &:hover {
+    cursor: none;
+  }
 
   &::before {
     content: "";

@@ -10,6 +10,10 @@
     min-height: 80px;
   }
 
+  &--custom-cursor {
+    cursor: none;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -179,6 +183,10 @@
 
       border-radius: 12px;
     }
+  }
+
+  .main-header--custom-cursor & {
+    cursor: none;
   }
 }
 
