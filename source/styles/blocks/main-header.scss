@@ -29,6 +29,10 @@
   }
 }
 
+// .main-header--custom-cursor:hover {
+//   cursor: none;
+// }
+
 .main-header--sticky {
   @media (min-width: $vp-768) {
     position: sticky;
@@ -185,7 +189,7 @@
     }
   }
 
-  .main-header--custom-cursor & {
+  .main-header--custom-cursor &:hover {
     cursor: none;
   }
 }
