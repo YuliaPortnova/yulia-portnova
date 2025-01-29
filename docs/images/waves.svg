@@ -1,0 +1,39 @@
+<svg viewBox="0 0 64 64" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+
+  <rect  width="64" height="64" x="-24" y="-36" rx="25" ry="32" fill="#fff">
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="360"
+      to="0"
+      begin="0s"
+      dur="4s"
+      repeatCount="indefinite"
+    />
+  </rect>
+
+  <rect fill="#fff" width="72" height="72" x="-24" y="-36" rx="32" ry="32">
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="360"
+      to="0"
+      begin="0.5s"
+      dur="3s"
+      repeatCount="indefinite"
+    />
+  </rect>
+
+  <rect fill="#fff" width="64" height="64" x="-24" y="-36" rx="25" ry="25">
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="360"
+      to="0"
+      begin="1s"
+      dur="4s"
+      repeatCount="indefinite"
+    />
+  </rect>
+
+</svg>

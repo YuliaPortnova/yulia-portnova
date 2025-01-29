@@ -5,7 +5,6 @@ const cursorCircle = document.querySelector('.cursor circle');
 const footer = document.querySelector('.main-footer');
 const footerLinks = footer.querySelectorAll('.main-footer__link');
 const scrollButton = document.querySelector('.scroll-to');
-const header = document.querySelector('.main-header');
 
 const initCursor = () => {
   if (links && cursor && cursorCircle) {
