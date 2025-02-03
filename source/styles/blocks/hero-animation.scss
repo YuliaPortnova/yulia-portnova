@@ -14,11 +14,18 @@
   top: 0;
   right: 0;
   left: 0;
+  font-size: 40px;
+  line-height: 44px;
+  color: $color-base-black;
+  transform-origin: 0 0;
+  width: max-content;
 
   &--1 {
+    transform-origin: bottom center;
+    width: 100%;
     height: 100%;
 
-    transform: translateZ(0);
+    transform: translateZ(-5px)  scale(6);
 
     object-fit: cover;
 
@@ -28,65 +35,94 @@
   }
 
   &--2 {
-    margin: 55vh 0 0;
-
+    transform: translateZ(-1px) scale(2) translate(-80px, -150px);
     color: $color-base-secondary;
 
-    transform: translateZ(-4px) scale(5);
+    @media (min-width: $vp-1440) {
+      transform: translateZ(-2px) scale(3) translateX(-500px);
+    }
   }
 
   &--3 {
-    width: max-content;
+    transform: translateZ(0) translate(20px, 250px);
 
-    font-size: 40px;
-    line-height: 44px;
-    color: $color-base-black;
-
-    transform: translateZ(-1px) scale(2) translate(0, 500px);
-    transform-origin: 0 0;
-
-    @media (min-width: $vp-768) {
-      transform: translateZ(-1px) scale(2) translate(100px, 800px);
-    }
+    // @media (min-width: $vp-768) {
+    //   transform: translateZ(0) translate(100px, 800px);
+    // }
 
     @media (min-width: $vp-1440) {
-      transform: translateZ(-1px) scale(2) translate(500px, 300px);
+      transform: translateZ(0) translate(140px, 150px);
     }
   }
 
   &--4 {
-    width: max-content;
+    transform: translateZ(0) translate(0, 310px);
 
-    font-size: 40px;
-    line-height: 44px;
-    color: $color-base-primary;
 
-    transform: translateZ(-2px) scale(3) translate(0, 500px);
+    @media (min-width: $vp-1440) {
+      transform: translateZ(0) translate(0, 300px);
+    }
   }
 
   &--5 {
-    width: max-content;
-
-    font-size: 40px;
-    line-height: 44px;
     color: $color-base-secondary;
-
-    transform: translateZ(-3px) scale(4) translate(0, 500px);
+    transform: translateZ(0) translate(50px, 550px);
 
     @media (min-width: $vp-768) {
-      transform-origin: 0 0;
-      transform: translateZ(-3px) scale(4) translate(0, -100px);
+      transform: translateZ(0) translate(250px, 550px);
+    }
+  }
+
+  &--6 {
+    color: $color-base-secondary;
+
+    transform: translateZ(0) translate(0px, 850px);
+
+    @media (min-width: $vp-768) {
+      transform: translateZ(0) translate(140px, 850px);
+    }
+  }
+
+  &--7 {
+    color: $color-base-secondary;
+
+    transform: translateZ(0) translate(20px, 1100px);
+
+    @media (min-width: $vp-768) {
+      transform: translateZ(0) translate(100px, 1100px);
+    }
+  }
+
+  &--8 {
+    transform: translateZ(0) translate(10px, 1450px);
+
+    @media (min-width: $vp-768) {
+      transform: translateZ(0) translate(350px, 1450px);
+    }
+  }
+
+  &--9 {
+    transform: translateZ(0) translate(15px, 1700px);
+
+    @media (min-width: $vp-768) {
+      transform: translateZ(0) translate(120px, 1700px);
     }
   }
 }
 
 .hero-animation__layer--1 img {
+  position: relative;
   display: block;
   width: 100%;
   height: calc(100% + 800px);
   max-height: calc(100% + 800px);
 
   object-fit: cover;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+  }
 }
 
 .hero-animation__title {
@@ -99,22 +135,22 @@
   line-height: 37px;
 
   @media (min-width: 500px) {
-    font-size: 65px;
-    line-height: 70px;
+    font-size: 45px;
+    line-height: 50px;
   }
 
   @media (min-width: $vp-768) {
     padding: 15px 60px;
 
-    font-size: 85px;
-    line-height: 85px;
+    font-size: 48px;
+    line-height: 54px;
   }
 
   @media (min-width: $vp-1440) {
     padding: 20px 80px;
 
-    font-size: 150px;
-    line-height: 170px;
+    font-size: 60px;
+    line-height: 64px;
 
     transform: translateX(-80px);
   }
@@ -134,23 +170,23 @@
 .hero-animation__text {
   margin: 0;
   padding: 10px 12px;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 15px;
+  line-height: 17px;
 
   @media (min-width: 500px) {
-    font-size: 24px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 18px;
   }
 
   @media (min-width: $vp-768) {
-    font-size: 30px;
-    line-height: 34px;
-    padding: 13px 40px;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 13px 30px;
   }
 
   @media (min-width: $vp-1440) {
-    font-size: 34px;
-    line-height: 39px;
+    font-size: 20px;
+    line-height: 24px;
   }
 
   &::before {
@@ -158,7 +194,7 @@
     position: absolute;
     z-index: -1;
 
-    background-color: rgba($color-base-white, 0.6);
+    background-color: rgba($color-base-white, 0.8);
     border-radius: 80px;
 
     inset: 0;
