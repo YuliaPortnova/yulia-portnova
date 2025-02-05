@@ -1,10 +1,18 @@
+.parallax-mouse-move {
+  display: none;
+
+  @media (hover: hover) {
+    display: block;
+  }
+}
+
 .parallax-mouse-move__container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   width: 100%;
   max-width: 500px;
-  margin-bottom: 60px;
+  margin: 0 0 60px 0;
+  padding: 0 20px;
 
   gap: 40px;
 }
