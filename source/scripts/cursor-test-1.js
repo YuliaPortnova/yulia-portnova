@@ -68,6 +68,21 @@ const changeColor = () => {
 window.addEventListener('mousemove', updateCoordinates);
 window.addEventListener('click', changeColor);
 
+document.addEventListener('mouseenter', () => {
+  document.body.style.cursor = 'none';
+});
+
+document.body.style.cursor = 'none';
+
+// Обрабатываем уход и возвращение мыши в window
+window.addEventListener('mouseout', () => {
+  cursor.style.display = 'none'; // Скрываем кастомный курсор, когда мышь выходит за пределы
+});
+
+window.addEventListener('mouseover', () => {
+  cursor.style.display = 'block'; // Показываем кастомный курсор, когда мышь возвращается
+});
+
 const requestAnimationHandler = () => {
   updateCursor();
   requestAnimationFrame(requestAnimationHandler);
