@@ -208,15 +208,8 @@
 .about__text {
   margin: 0 0 10px;
 
-  font-size: 14px;
-  line-height: 18px;
   font-family: $ff-old-standard-tt;
   text-align: justify;
-
-  @media (min-width: $vp-768) {
-    font-size: 16px;
-    line-height: 20px;
-  }
 
   &--small {
     margin-top: -7px;
@@ -227,6 +220,16 @@
     @media (min-width: $vp-768) {
       font-size: 14px;
       line-height: 16px;
+    }
+  }
+
+  &--long {
+    font-size: 14px;
+    line-height: 18px;
+
+    @media (min-width: $vp-768) {
+      font-size: 16px;
+      line-height: 20px;
     }
   }
 }
