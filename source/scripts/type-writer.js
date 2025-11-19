@@ -1,4 +1,8 @@
-const typeWriter = (element) => {
+const initTypeWriter = (element) => {
+  if (!element) {
+    return;
+  }
+
   let i = 0;
   const text = element.textContent;
   element.textContent = '';
@@ -15,6 +19,6 @@ const typeWriter = (element) => {
   print();
 };
 
-export { typeWriter };
+export { initTypeWriter };
 
 
