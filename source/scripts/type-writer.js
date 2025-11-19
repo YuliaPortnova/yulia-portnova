@@ -20,5 +20,3 @@ const initTypeWriter = (element) => {
 };
 
 export { initTypeWriter };
-
-
